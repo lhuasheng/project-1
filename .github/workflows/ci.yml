@@ -1,0 +1,24 @@
+name: Gate 4 — Integration CI
+
+on:
+  pull_request:
+    branches: [main, develop]
+  push:
+    branches: [main]
+
+jobs:
+  gates:
+    name: CI Gates
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: lhuasheng/shared-sdlc/actions/ci-gates@main
+        with:
+          node-version: '20'
+          install-cmd: 'npm ci'
+          lint-cmd: 'npm run lint'
+          typecheck-cmd: 'npm run typecheck'
+          test-cmd: 'npm run test:coverage'
+          max-pr-lines: '400'

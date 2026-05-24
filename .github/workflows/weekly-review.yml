@@ -1,0 +1,20 @@
+name: Gate 3 — Weekly AI Code Review
+
+on:
+  schedule:
+    - cron: '0 9 * * 1'   # Every Monday 09:00 UTC
+  workflow_dispatch:
+
+jobs:
+  weekly:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+      pull-requests: read
+    steps:
+      - uses: lhuasheng/shared-sdlc/actions/weekly-review@main
+        with:
+          anthropic-api-key: ${{ secrets.ANTHROPIC_API_KEY }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          shared-sdlc-repo: lhuasheng/shared-sdlc

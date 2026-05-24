@@ -1,0 +1,21 @@
+name: Gate 3 — On-Demand PR Review
+
+on:
+  issue_comment:
+    types: [created]
+
+jobs:
+  ai-review:
+    if: |
+      github.event.issue.pull_request &&
+      contains(github.event.comment.body, '/ai-review')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - uses: lhuasheng/shared-sdlc/actions/ai-pr-review@main
+        with:
+          anthropic-api-key: ${{ secrets.ANTHROPIC_API_KEY }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          shared-sdlc-repo: lhuasheng/shared-sdlc
