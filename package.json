@@ -4,10 +4,19 @@
   "description": "Replace this with a one-paragraph description of what project-1 does, who uses it, and where it runs.",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint . --max-warnings 0",
-  "typecheck": "tsc --noEmit",
-  "test": "jest",
-  "test:coverage": "jest --coverage --coverageThreshold='{\"global\":{\"lines\":70}}'"
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "jest",
+    "test:coverage": "jest --coverage"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "coverageThreshold": {
+      "global": {
+        "lines": 70
+      }
+    }
   },
   "keywords": [],
   "author": "",
@@ -16,6 +25,7 @@
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "@types/jest": "^30.0.0",
+    "@types/node": "^25.9.1",
     "eslint": "^10.4.0",
     "jest": "^30.4.2",
     "ts-jest": "^29.4.11",
