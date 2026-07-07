@@ -1,0 +1,27 @@
+name: Issue Triage
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: read
+  issues: write
+  actions: write
+
+jobs:
+  triage:
+    name: Issue Triage
+    runs-on: ubuntu-latest
+    steps:
+      - uses: lhuasheng/shared-sdlc/actions/dispatch-agentic@main
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          workflow-repo: lhuasheng/shared-agentic
+          workflow-ref: main
+          workflow-file: issue-triage.md
+          payload: |
+            {
+              "issue_number": "${{ github.event.issue.number }}",
+              "repository": "${{ github.repository }}"
+            }
