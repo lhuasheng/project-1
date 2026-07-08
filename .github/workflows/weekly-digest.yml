@@ -1,3 +1,8 @@
+# .github/workflows/weekly-digest.yml
+# Thin caller workflow — Weekly Engineering Digest (Pattern 3)
+# Copy this file into your project repository's .github/workflows/ directory.
+# Requires: GITHUB_TOKEN (auto-provided)
+
 name: Weekly Digest
 
 on:
@@ -39,7 +44,7 @@ jobs:
       - uses: lhuasheng/shared-sdlc/actions/dispatch-agentic@main
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          workflow-repo: lhuasheng/shared-agentic
+          workflow-repo: ${{ github.repository }}
           workflow-ref: main
           workflow-file: weekly-digest.md
           payload: |

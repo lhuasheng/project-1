@@ -1,3 +1,8 @@
+# .github/workflows/release.yml
+# Thin caller workflow — Release Notes Generation (Pattern 4)
+# Copy this file into your project repository's .github/workflows/ directory.
+# Requires: GITHUB_TOKEN (auto-provided)
+
 name: Release
 
 on:
@@ -17,5 +22,5 @@ jobs:
       - uses: lhuasheng/shared-sdlc/actions/release-notes-router@main
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          agentic-workflow-repo: lhuasheng/shared-agentic
+          agentic-workflow-repo: ${{ github.repository }}
           agentic-workflow-ref: main
