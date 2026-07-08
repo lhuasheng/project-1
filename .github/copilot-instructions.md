@@ -1,6 +1,6 @@
 # Project-1 Copilot Instructions
 
-> Org-wide rules in `lhuasheng/.github/copilot-instructions.md` apply first.
+> Org-wide rules in `lhuasheng/shared-sdlc/docs/org/copilot-instructions.md` apply first.
 > This file lists **additions and overrides** specific to project-1 only.
 
 ## Stack-specific rules

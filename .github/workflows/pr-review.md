@@ -99,8 +99,8 @@ delimiter as specified in `docs/pr-comment-marker.md`.
 
 When calling `add_comment`, always set `repo` to `${{ inputs.repository }}`
 (e.g. `lhuasheng/project-1`) and `item_number` to `${{ inputs.pr_number }}`.
-Omitting `repo` causes the safe-output handler to fall back to the workflow's
-own repository (`lhuasheng/shared-agentic`), which will result in a 404.
+The workflow runs in the same repository as the PR (the lock file is vendored
+locally), but passing `repo` explicitly keeps the target unambiguous.
 
 ## Constraints
 
