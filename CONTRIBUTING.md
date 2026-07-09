@@ -1,7 +1,7 @@
 # Contributing to project-1
 
 > The **5 gates** and overall workflow are defined org-wide in
-> [`lhuasheng/.github/CONTRIBUTING.md`](https://github.com/lhuasheng/.github/blob/main/CONTRIBUTING.md).
+> [`lhuasheng/shared-sdlc/docs/org/CONTRIBUTING.md`](https://github.com/lhuasheng/shared-sdlc/blob/main/docs/org/CONTRIBUTING.md).
 > **Read that first.** This file only lists project-1-specific additions.
 
 ## Local setup

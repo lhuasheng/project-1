@@ -14,8 +14,8 @@ npm run dev
 
 | Topic | Location |
 |---|---|
-| 5 gates, workflow, Day-1 checklist | `lhuasheng/.github/CONTRIBUTING.md` |
-| AI / Copilot rules (org-wide) | `lhuasheng/.github/copilot-instructions.md` |
+| 5 gates, workflow, Day-1 checklist | `lhuasheng/shared-sdlc/docs/org/CONTRIBUTING.md` |
+| AI / Copilot rules (org-wide) | `lhuasheng/shared-sdlc/docs/org/copilot-instructions.md` |
 | AI / Copilot rules (this project) | `.github/copilot-instructions.md` |
 | CI gate logic | `lhuasheng/shared-sdlc/actions/ci-gates/` |
 | AI PR review (`/ai-review`) | `.github/workflows/pr-review.md` (vendored; dispatched by `ai-pr-review.yml`) |
